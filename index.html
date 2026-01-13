@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curreca Pharma | Quality Healthcare, Delivered</title>
+    <meta name="description" content="Curreca Pharma - Assam's trusted pharmaceutical company. WHO-GMP certified medicines, gynaecological care, and general therapeutics.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        /* HERO SECTION OVERRIDE FOR IMAGE */
+        #hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            /* Premium Pharma Image: DNA/Molecule/Abstract Medical Blue */
+            background: linear-gradient(to right, rgba(240, 253, 250, 0.95) 0%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.1) 100%), 
+                        url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2560&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpg" alt="Curreca Pharma Logo">
+                </a>
+            </div>
+            
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="text-primary" style="font-weight: 700;">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="distributorship.html">Distributorship</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard-login.html" class="btn btn-primary" style="margin-left:20px; color:white; padding: 8px 25px; box-shadow: none;">Partner Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content gsap-fade-up">
+                <div style="display: inline-block; background: white; color: var(--primary); padding: 8px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 700; margin-bottom: 25px; border: 1px solid #b2dfdb; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    🚀 Trusted by 500+ Doctors in Assam
+                </div>
+                <h1 style="font-size: 3.8rem; line-height: 1.1; margin-bottom: 25px;">
+                    Advanced Healthcare, <br>
+                    <span class="text-primary">Clinically Delivered.</span>
+                </h1>
+                <p style="font-size: 1.2rem; margin-bottom: 35px; color: #334155; max-width: 550px; line-height: 1.8; font-weight: 500;">
+                    We bridge the gap between premium science and accessible care. Delivering WHO-GMP certified therapeutics and specialized gynaecological solutions across the North East.
+                </p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="products.html" class="btn btn-primary" style="padding: 14px 35px;">View Products</a>
+                    <a href="distributorship.html" class="btn" style="border: 2px solid var(--primary); color: var(--primary); background: rgba(255,255,255,0.8); padding: 14px 35px; border-radius: 50px; font-weight: 700; text-decoration: none; backdrop-filter: blur(5px);">Partner With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: white; position: relative; z-index: 2;">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px;">
+                <div class="card text-center gsap-fade-up">
+                    <div class="icon-box" style="margin: 0 auto 20px;">🔬</div>
+                    <h3 style="margin-bottom: 10px;">WHO-GMP</h3>
+                    <p style="color: #64748b; font-size: 0.9rem;">Manufacturing standards ensuring 100% safety.</p>
+                </div>
+                <div class="card text-center gsap-fade-up" style="transition-delay: 0.1s;">
+                    <div class="icon-box" style="margin: 0 auto 20px;">💊</div>
+                    <h3 style="margin-bottom: 10px;">Premium Range</h3>
+                    <p style="color: #64748b; font-size: 0.9rem;">High-efficacy Tablets, Syrups & Injections.</p>
+                </div>
+                <div class="card text-center gsap-fade-up" style="transition-delay: 0.2s;">
+                    <div class="icon-box" style="margin: 0 auto 20px;">🚚</div>
+                    <h3 style="margin-bottom: 10px;">PAN Assam</h3>
+                    <p style="color: #64748b; font-size: 0.9rem;">Robust supply chain & logistics network.</p>
+                </div>
+                <div class="card text-center gsap-fade-up" style="transition-delay: 0.3s;">
+                    <div class="icon-box" style="margin: 0 auto 20px;">🛡️</div>
+                    <h3 style="margin-bottom: 10px;">ISO 9001:2015</h3>
+                    <p style="color: #64748b; font-size: 0.9rem;">Certified Quality Management Systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <h2 class="text-primary" style="font-size: 2.5rem; margin-bottom: 15px;">Therapeutic Focus</h2>
+                <p style="color: #64748b;">Specialized formulations designed for critical healthcare needs.</p>
+            </div>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                <div class="card" style="display: flex; align-items: center; gap: 20px; padding: 25px;">
+                    <div style="width: 90px; height: 90px; flex-shrink: 0; overflow: hidden; border-radius: 12px;">
+                        <img src="assets/img2.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Gastro Medicine">
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--primary);">Gastro & Hepato</h4>
+                        <p style="font-size: 0.9rem; color: #64748b; line-height: 1.5;">Advanced liver care, enzymes, and digestive health formulations.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="display: flex; align-items: center; gap: 20px; padding: 25px;">
+                    <div style="width: 90px; height: 90px; flex-shrink: 0; overflow: hidden; border-radius: 12px;">
+                        <img src="assets/img1.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Antibiotics">
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--primary);">Antibiotics</h4>
+                        <p style="font-size: 0.9rem; color: #64748b; line-height: 1.5;">High-efficacy anti-infectives for critical care management.</p>
+                    </div>
+                </div>
+
+                <div class="card" style="display: flex; align-items: center; gap: 20px; padding: 25px;">
+                    <div style="width: 90px; height: 90px; flex-shrink: 0; overflow: hidden; border-radius: 12px;">
+                        <img src="assets/img.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Gynaecology">
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--primary);">Gynaecology</h4>
+                        <p style="font-size: 0.9rem; color: #64748b; line-height: 1.5;">Comprehensive solutions for women's health and wellness.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="products.html" class="btn btn-primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: linear-gradient(135deg, #008080 0%, #004d40 100%); color: white;">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+            <div style="max-width: 650px;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 20px; line-height: 1.2;">Join Our Distribution Network</h2>
+                <p style="opacity: 0.9; margin-bottom: 30px; font-size: 1.1rem; font-weight: 300;">
+                    We are expanding our footprint across the North East. Partner with us for monopoly rights, high margins, and complete marketing support.
+                </p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <span style="display: flex; align-items: center; gap: 8px;"><span style="background:rgba(255,255,255,0.2); border-radius:50%; padding:2px;">✅</span> District Monopoly</span>
+                    <span style="display: flex; align-items: center; gap: 8px;"><span style="background:rgba(255,255,255,0.2); border-radius:50%; padding:2px;">✅</span> High ROI</span>
+                    <span style="display: flex; align-items: center; gap: 8px;"><span style="background:rgba(255,255,255,0.2); border-radius:50%; padding:2px;">✅</span> Promo Inputs</span>
+                </div>
+            </div>
+            <div>
+                <a href="distributorship.html" class="btn" style="background: white; color: var(--primary); padding: 15px 40px; font-size: 1.1rem;">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <div class="footer-logo-box" style="background: white; padding: 12px 15px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/logo.jpg" alt="Curreca Pharma" style="height: 45px; display: block;">
+                    </div>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: #94a3b8;">
+                        Curreca Pharma is dedicated to providing high-quality, affordable medicines manufactured in WHO-GMP certified facilities. Innovating for a healthier tomorrow.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 style="color: white; margin-bottom: 20px;">Company</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="about.html" style="color: #94a3b8; text-decoration: none; transition: 0.3s;">About Us</a></li>
+                        <li style="margin-bottom: 12px;"><a href="manufacturing.html" style="color: #94a3b8; text-decoration: none; transition: 0.3s;">Manufacturing</a></li>
+                        <li style="margin-bottom: 12px;"><a href="certifications.html" style="color: #94a3b8; text-decoration: none; transition: 0.3s;">Certifications</a></li>
+                        <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #94a3b8; text-decoration: none; transition: 0.3s;">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 style="color: white; margin-bottom: 20px;">Products</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="products.html" style="color: #94a3b8; text-decoration: none; transition: 0.3s;">Tablets & Capsules</a></li>
+                        <li style="margin-bottom: 12px;"><a href="products.html" style="color: #94a3b8; text-decoration: none; transition: 0.3s;">Oral Liquids</a></li>
+                        <li style="margin-bottom: 12px;"><a href="products.html" style="color: #94a3b8; text-decoration: none; transition: 0.3s;">Injectables</a></li>
+                        <li style="margin-bottom: 12px;"><a href="products.html" style="color: #94a3b8; text-decoration: none; transition: 0.3s;">Gynaecological</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 style="color: white; margin-bottom: 20px;">Get In Touch</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px; color: #94a3b8;">
+                            <span>📍</span> <span>Zoo Road, Guwahati,<br>Assam - 781024</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px; color: #94a3b8;">
+                            <span>📞</span> <span>+91 98640 XXXXX</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; gap: 10px; color: #94a3b8;">
+                            <span>✉️</span> <span>info@currecapharma.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+                <div style="color: #64748b; font-size: 0.9rem;">
+                    &copy; <span id="year">2026</span> Curreca Pharma. All rights reserved.
+                </div>
+                <div style="display: flex; gap: 20px; font-size: 0.9rem;">
+                    <a href="privacy.html" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a>
+                    <a href="terms.html" style="color: #94a3b8; text-decoration: none;">Terms & Conditions</a>
+                    <a href="disclaimer.html" style="color: #94a3b8; text-decoration: none;">Disclaimer</a>
+                </div>
+            </div>
+            
+            <div class="text-center" style="font-size:0.75rem; margin-top:20px; color:#475569; padding-top: 10px;">
+                Medical Disclaimer: Schedule H Prescription Drugs should be sold by retail on the prescription of a Registered Medical Practitioner only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
+
+```

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Login | Curreca Pharma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="background: #f1f5f9; display:flex; align-items:center; justify-content:center; height:100vh;">
+    
+    <div class="card" style="width:100%; max-width:400px; padding:40px; background:white;">
+        <div class="text-center" style="margin-bottom:30px;">
+            <img src="assets/logo.jpg" style="height:60px; margin-bottom:10px;">
+            <h3>Distributor Portal</h3>
+        </div>
+        <form id="login-form">
+            <label style="font-size:0.9rem;">Distributor ID</label>
+            <input type="text" id="dist-id" placeholder="Ex: DIST001" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #cbd5e1; border-radius:8px;">
+            
+            <label style="font-size:0.9rem;">Password</label>
+            <input type="password" id="dist-pass" placeholder="Password" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #cbd5e1; border-radius:8px;">
+            
+            <button type="submit" class="btn btn-primary" style="width:100%;">Secure Login</button>
+        </form>
+        <p class="text-center" style="margin-top:20px; font-size:0.8rem;">
+            <a href="index.html" style="color:var(--primary); text-decoration:none;">← Back to Website</a>
+        </p>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

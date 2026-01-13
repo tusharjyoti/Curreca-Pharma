@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications | Curreca Pharma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <style>
+        /* Specific Styles for Certification Cards */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+        .cert-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+            height: 400px; /* Fixed height to prevent giant boxes */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 128, 128, 0.15);
+            border-color: var(--primary);
+        }
+
+        .cert-visual {
+            height: 60%; /* Occupies top 60% */
+            background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Decorative Badge */
+        .cert-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-size: 1.5rem;
+            z-index: 2;
+        }
+
+        /* The Image (Constrained) */
+        .cert-visual img {
+            max-height: 90%;
+            max-width: 80%;
+            object-fit: contain; /* CRITICAL FIX: Prevents stretching */
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+            transform: rotate(-5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .cert-card:hover .cert-visual img {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .cert-content {
+            height: 40%;
+            padding: 25px;
+            background: white;
+            border-top: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cert-content h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .cert-content p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo"><a href="index.html"><img src="assets/logo.jpg" alt="Curreca Logo"></a></div>
+            <div class="hamburger"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="distributorship.html">Distributorship</a>
+                <a href="certifications.html" class="text-primary" style="font-weight: 700;">Certifications</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard-login.html" class="btn btn-primary" style="margin-left:20px; color:white; padding: 8px 25px;">Partner Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding" style="margin-top:60px;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Quality Benchmarks</h1>
+                <p style="color: #64748b; max-width: 600px; margin: 0 auto;">
+                    We strictly adhere to international manufacturing standards. Our products are the result of rigorous quality checks and compliance.
+                </p>
+            </div>
+            
+            <div class="cert-grid">
+                
+                <div class="cert-card">
+                    <div class="cert-visual">
+                        <div class="cert-badge">🛡️</div>
+                        <img src="assets/img1.jpg" alt="GMP Certified Product">
+                    </div>
+                    <div class="cert-content">
+                        <h3>WHO-GMP Compliance</h3>
+                        <p>Our manufacturing partners operate under World Health Organization Good Manufacturing Practices, ensuring batch-to-batch consistency and safety.</p>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-visual">
+                        <div class="cert-badge">📜</div>
+                        <img src="assets/img2.jpg" alt="ISO Certified">
+                    </div>
+                    <div class="cert-content">
+                        <h3>ISO 9001:2015</h3>
+                        <p>Certified Quality Management Systems (QMS) are in place to monitor every stage of production, storage, and distribution.</p>
+                    </div>
+                </div>
+
+                 <div class="cert-card">
+                    <div class="cert-visual">
+                        <div class="cert-badge">🔬</div>
+                        <img src="assets/img.jpg" alt="Lab Tested">
+                    </div>
+                    <div class="cert-content">
+                        <h3>Lab Tested Purity</h3>
+                        <p>Every batch undergoes stringent testing for dissolution, assay, and sterility before it reaches the market.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo-box" style="background: white; padding: 12px 15px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/logo.jpg" style="height: 45px; display: block;">
+                    </div>
+                    <p style="font-size: 0.95rem; color: #94a3b8;">Innovating for a healthier tomorrow with WHO-GMP certified excellence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color:white; margin-bottom:20px;">Company</h4>
+                    <ul><li><a href="about.html">About Us</a></li><li><a href="manufacturing.html">Manufacturing</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color:white; margin-bottom:20px;">Products</h4>
+                    <ul><li><a href="products.html">Tablets</a></li><li><a href="products.html">Syrups</a></li><li><a href="products.html">Injections</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color:white; margin-bottom:20px;">Contact</h4>
+                    <p style="color:#94a3b8;">Zoo Road, Guwahati<br>+91 98640 XXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Curreca Pharma.</div>
+                <div style="display:flex; gap:20px;"><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

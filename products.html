@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Curreca Pharma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Internal styles to ensure grid looks perfect */
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 128, 128, 0.15);
+            border-color: var(--accent);
+        }
+        .product-img-box {
+            height: 220px;
+            width: 100%;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .product-img-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+        }
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+        .badge-tablet { background: #e0f2f1; color: var(--primary); }
+        .badge-syrup { background: #fff7ed; color: #ea580c; }
+        .badge-capsule { background: #f0f9ff; color: #0284c7; }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="container nav-flex">
+            <div class="logo"><a href="index.html"><img src="assets/logo.jpg" alt="Curreca Logo"></a></div>
+            <div class="hamburger"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html" class="text-primary" style="font-weight: 700;">Products</a>
+                <a href="distributorship.html">Distributorship</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="contact.html">Contact</a>
+                <a href="dashboard-login.html" class="btn btn-primary" style="margin-left:20px; color:white; padding: 8px 25px;">Partner Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding" style="margin-top:60px; padding-bottom: 30px;">
+        <div class="container">
+            <div class="text-center">
+                <h1 style="font-size: 2.5rem; color: var(--dark);">Our Formulations</h1>
+                <p style="color: #64748b; margin-top: 10px;">Advanced therapeutics for modern healthcare needs.</p>
+                
+                <div style="margin-top:40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                    <button class="btn filter-btn active" onclick="filterProducts('All')" style="border:1px solid #cbd5e1; background:white; color:var(--dark);">All</button>
+                    <button class="btn filter-btn" onclick="filterProducts('Tablets')" style="border:1px solid #cbd5e1; background:white; color:var(--dark);">Tablets</button>
+                    <button class="btn filter-btn" onclick="filterProducts('Capsules')" style="border:1px solid #cbd5e1; background:white; color:var(--dark);">Capsules</button>
+                    <button class="btn filter-btn" onclick="filterProducts('Syrups')" style="border:1px solid #cbd5e1; background:white; color:var(--dark);">Syrups</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="padding-top: 20px;">
+        <div class="container">
+            <div id="product-grid" class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo-box" style="background: white; padding: 12px 15px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
+                        <img src="assets/logo.jpg" style="height: 45px; display: block;">
+                    </div>
+                    <p style="font-size: 0.95rem; color: #94a3b8;">Innovating for a healthier tomorrow with WHO-GMP certified excellence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color:white; margin-bottom:20px;">Company</h4>
+                    <ul><li><a href="about.html">About Us</a></li><li><a href="manufacturing.html">Manufacturing</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color:white; margin-bottom:20px;">Products</h4>
+                    <ul><li><a href="products.html">Tablets</a></li><li><a href="products.html">Syrups</a></li><li><a href="products.html">Injections</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h4 style="color:white; margin-bottom:20px;">Contact</h4>
+                    <p style="color:#94a3b8;">Zoo Road, Guwahati<br>+91 98640 XXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Curreca Pharma.</div>
+                <div style="display:flex; gap:20px;"><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Define Data
+        const productsData = [
+            {
+                id: 1,
+                name: "CURROLIV-U 300",
+                composition: "Ursodeoxycholic Acid Tablets IP 300 mg",
+                type: "Tablets",
+                packSize: "10x1x10 Tablets",
+                image: "assets/img2.jpg" 
+            },
+            {
+                id: 2,
+                name: "CURROCEF-O CV",
+                composition: "Cefpodoxime & Potassium Clavulanate",
+                type: "Tablets",
+                packSize: "10x1x10 Tablets",
+                image: "assets/img1.jpg"
+            },
+            {
+                id: 3,
+                name: "Curreca-60K",
+                composition: "Cholecalciferol Softgel Capsules 60000 IU",
+                type: "Capsules",
+                packSize: "1x12 Softgels",
+                image: "assets/img.jpg"
+            },
+            {
+                id: 4,
+                name: "CURRA-FEM SYRUP",
+                composition: "Ayurvedic Uterine Tonic",
+                type: "Syrups",
+                packSize: "200ml",
+                image: "assets/img.jpg"
+            },
+            {
+                id: 5,
+                name: "CURRA-DERM",
+                composition: "Miconazole Nitrate & Neomycin",
+                type: "Ointments",
+                packSize: "15g Tube",
+                image: "assets/img1.jpg"
+            }
+        ];
+
+        // 2. Render Function
+        function renderProducts(filterType) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = ''; // Clear current
+
+            const filtered = filterType === 'All' 
+                ? productsData 
+                : productsData.filter(p => p.type === filterType);
+
+            if(filtered.length === 0) {
+                grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #64748b;">No products found in this category.</p>';
+                return;
+            }
+
+            filtered.forEach(p => {
+                // Determine Badge Color
+                let badgeClass = 'badge-tablet';
+                if(p.type === 'Syrups') badgeClass = 'badge-syrup';
+                if(p.type === 'Capsules') badgeClass = 'badge-capsule';
+
+                const html = `
+                    <div class="product-card">
+                        <div class="product-img-box">
+                            <img src="${p.image}" alt="${p.name}">
+                        </div>
+                        <div class="product-info">
+                            <div style="margin-bottom: 10px;">
+                                <span class="badge ${badgeClass}">${p.type}</span>
+                            </div>
+                            <h3 style="color:var(--primary); font-size: 1.25rem; margin-bottom: 5px;">${p.name}</h3>
+                            <p style="font-size:0.9rem; color:#64748b; margin-bottom: 15px; line-height: 1.4;">${p.composition}</p>
+                            <div style="margin-top:auto; padding-top:15px; border-top:1px solid #f1f5f9; display:flex; justify-content:space-between; align-items:center; font-size:0.85rem; font-weight:600; color:var(--dark);">
+                                <span>📦 ${p.packSize}</span>
+                                <a href="contact.html" style="color:var(--primary); text-decoration:none;">Enquire →</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', html);
+            });
+        }
+
+        // 3. Filter Logic
+        function filterProducts(type) {
+            // Update Buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.style.background = 'white';
+                btn.style.color = '#0f172a';
+                btn.style.borderColor = '#cbd5e1';
+            });
+            event.target.style.background = '#008080'; // var(--primary)
+            event.target.style.color = 'white';
+            event.target.style.borderColor = '#008080';
+
+            // Render
+            renderProducts(type);
+        }
+
+        // 4. Initial Load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts('All');
+            // Set initial active button style
+            const allBtn = document.querySelector('.filter-btn');
+            if(allBtn) {
+                allBtn.style.background = '#008080';
+                allBtn.style.color = 'white';
+                allBtn.style.borderColor = '#008080';
+            }
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
